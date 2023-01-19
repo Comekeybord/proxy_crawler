@@ -14,7 +14,7 @@ dbSetting = {
     'host': 'localhost',
     'port': 3306,
     'usr': 'root',
-    'pwd': '',
+    'pwd': 'admin666',
     'dbName': 'proxy_pool',
     'tableName': 'proxy_list',
 }

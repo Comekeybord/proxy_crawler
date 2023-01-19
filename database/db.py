@@ -11,6 +11,9 @@ import pymysql
 # 导入数据库配置
 from setting.setting import dbSetting
 
+# 导入正则表达式
+import re
+
 # 创建数据库链接
 db = pymysql.connect(
     host=dbSetting['host'],
@@ -34,7 +37,12 @@ def commit(sql):
         cur.execute(sql)
         return cur.fetchall()
     except Exception as e:
-        print('数据库操作错误!', e)
+        err = str(e.args[1])
+        # 找到已存在的ip
+        pattern = re.compile('\d+.\d+.\d+.\d+')
+        ip = pattern.findall(err)[0]
+        if err.replace('proxy_ip_UNIQUE', ''):
+            print('数据库操作错误!', ip + '已存在')
 
 
 # 插入数据函数
