@@ -41,7 +41,7 @@ def commit(sql):
         # 找到已存在的ip
         pattern = re.compile('\d+.\d+.\d+.\d+')
         ip = pattern.findall(err)[0]
-        if err.replace('proxy_ip_UNIQUE', ''):
+        if err.replace('UNIQUE', ''):
             print('数据库操作错误!', ip + '已存在')
 
 
