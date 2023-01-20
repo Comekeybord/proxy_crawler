@@ -50,8 +50,15 @@ def insertData(ip, port, live):
     # 定义sql语句
     # ip是字符类型，port是int型，live是tinyint类型
     sql = '''
-    insert into {} (proxy_ip,proxy_port,is_live) values ('{}',{},{})
-    '''.format(dbSetting['tableName'], ip, port, live)
+    insert into {} ({},{},{}) values ('{}',{},{})
+    '''.format(
+        dbSetting['tableName'],
+        dbSetting['ip_column_name'],
+        dbSetting['port_column_name'],
+        dbSetting['live_column_name'],
+        ip,
+        port,
+        live)
     commit(sql)
 
 

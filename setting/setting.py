@@ -11,12 +11,24 @@
 # 注意：数据库自己先创建好
 # 数据库配置
 dbSetting = {
+    # 数据库管理系统链接地址
     'host': 'localhost',
+    # 数据库管理系统端口
     'port': 3306,
+    # 数据库管理系统用户名
     'usr': 'root',
+    # 数据库管理系统密码
     'pwd': 'admin666',
+    # 库名
     'dbName': 'proxy_pool',
+    # 表名
     'tableName': 'proxy_list',
+    # ip列名
+    'ip_column_name': 'proxy_ip',
+    # 端口列名
+    'port_column_name': 'proxy_port',
+    # 是否存活列名
+    'live_column_name': 'is_live'
 }
 
 # 线程配置
