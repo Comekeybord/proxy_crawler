@@ -73,4 +73,6 @@ headers = {
 # 测试代理所用的网址
 testUrl = [
     'https://www.baidu.com/',
+    'http://icanhazip.com/',
+    'https://v.api.aa1.cn/api/yiyan/index.php'
 ]

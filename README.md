@@ -12,7 +12,7 @@
 
 - MIT License
 
-# 二、项目配置
+# 二、项目依赖
 
 1. 配置依赖  
    在项目目录下运行命令 `pip install -r requirements.txt`
@@ -55,7 +55,12 @@
     </tbody>
     </table>
 
-# 四、项目作者
+# 四、使用方式
+
+1. 配置好 `setting.py` 文件与数据库
+2. 直接运行 `run.py` 文件
+
+# 五、项目作者
 
 1. github主页  
    [Comekeybord](https://github.com/Comekeybord)

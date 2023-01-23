@@ -18,13 +18,16 @@ def requestTest(proxy):
         'http': f'{proxy}'
     }
     # 测试url
-    testUrl = setting.testUrl[0]
+    testUrl = setting.testUrl[2]
     headers = setting.headers
     try:
-        if requests.get(testUrl, headers=headers, proxies=proxys, timeout=2):
+        rep = requests.get(testUrl, headers=headers, proxies=proxys, timeout=2)
+        if rep.status_code == 200:
+            print(rep.text, proxy + '代理有效!')
             return True
         else:
+            print(f"{proxy}代理无效!")
             return False
-    except requests.exceptions.RequestException as e:
-        # print(e)
+    except Exception as e:
+        print(f"{proxy}代理无效!", e)
         return False

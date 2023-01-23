@@ -96,7 +96,7 @@ def spideStart():
     # 导入数据库操作
     from database import db
     # 将结果存入数据库
-    print('测试代理并存储到数据库...')
+    print('测试代理并存储到数据库,请稍等...')
     for res in resultsTemp:
         for key in res:
             ip = str(key)
